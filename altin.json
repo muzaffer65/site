@@ -1,0 +1,35 @@
+[
+    {
+        "kodlar": {
+            "OTOTAG": {
+                "isim": "OTOTAG",
+                "id": "BKElLp9HfH",
+                "desc": "otomotik tag veriir",
+                "modules": [
+                    "quick.db"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/610402966507225088/c0a727329071d1aede444184c9f8b771.png",
+                "main_code": "client.on(\"guildMemberAdd\", member => {\r\n  var tag = require('quick.db').fetch(`ototag_${member.guild.id}`)\r\n  if(!tag) return;\r\n  member.setNickname(`${tag}${member.user.username}`)\r\n  })",
+                "komutlar_code": " /komutlar/ototag.js\r\nconst qdb = require('quick.db');\r\nexports.run = async(client, message, args) => {\r\n  if (!message.member.permissions.has(\"ADMINISTRATOR\")) return;\r\n  if(!args[0] || args[0] !== \"sıfırla\"){\r\n  var tag = args.slice(0).join(' ')\r\n  if(!tag) return message.channel.send(\"Bir tag belirt!\")\r\n    qdb.set(`ototag_${message.guild.id}`, tag)\r\n    return message.channel.send(\"Oto Tag Ayarlandı!\")\r\n  }\r\n  if(args[0] == \"sıfırla\"){\r\n    qdb.delete(`ototag_${message.guild.id}`)\r\n    return message.channel.send(\"Oto Tag Sıfırlandı!\")\r\n  }\r\n}\r\nexports.conf = {\r\n aliases: [\"oto-tag\"],\r\n  permLevel: 0\r\n}\r\nexports.help = {\r\n  name: \"ototag\"\r\n}",
+                "kod_rank": "altin",
+                "k_adi": "Code Makare",
+                "date": "11/11/2021"
+            },
+            "v12 Ayarlanabilir Gelmiş Sayaç": {
+                "isim": "v12 Ayarlanabilir Gelmiş Sayaç",
+                "id": "8o9AtztF5a",
+                "desc": "V12 Ayarlanabilir Gelişmiş Sayaç Komutu TR De İLK",
+                "modules": [
+                    "discord.js ",
+                    " quick.db "
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/610402966507225088/201a8fd26a1992a2d174dfc947cc2953.png",
+                "main_code": "//--------------AYARLANABİLİR-SAYAÇ------------//\r\nclient.on(\"guildMemberAdd\", async member => {\r\n  let sayac = await db.fetch(`sayac_${member.guild.id}`);\r\n  let skanal = await db.fetch(`sayacK_${member.guild.id}`);\r\n  if (!sayac) return;\r\n  if (member.guild.memberCount >= sayac) {\r\n    member.guild.channels.cache\r\n      .get(skanal)\r\n      .send(\r\n        ` **${member.user.tag}** sunucuya **katıldı**! \\`${db.fetch(\r\n          `sayac_${member.guild.id}`\r\n        )}\\` kişi olduk! <a:tickmavi:840523917185384468> Sayaç sıfırlandı.`\r\n      );\r\n    db.delete(`sayac_${member.guild.id}`);\r\n    db.delete(`sayacK_${member.guild.id}`);\r\n    return;\r\n  } else {\r\n    member.guild.channels.cache\r\n      .get(skanal)\r\n      .send(\r\n        `<a:giri:842631337532850206> **${member.user.tag}** sunucuya **katıldı**! \\`${db.fetch(\r\n          `sayac_${member.guild.id}`\r\n        )}\\` üye olmamıza son \\`${db.fetch(`sayac_${member.guild.id}`) -\r\n          member.guild.memberCount}\\` üye kaldı! Sunucumuz şuanda \\`${\r\n          member.guild.memberCount\r\n        }\\` kişi!`\r\n      );\r\n  }\r\n});\r\n\r\nclient.on(\"guildMemberRemove\", async member => {\r\n  let sayac = await db.fetch(`sayac_${member.guild.id}`);\r\n  let skanal = await db.fetch(`sayacK_${member.guild.id}`);\r\n  if (!sayac) return;\r\n  member.guild.channels.cache\r\n    .get(skanal)\r\n    .send(\r\n      `<a:k_:842631398590382130> **${member.user.tag}** sunucudan **ayrıldı**! \\`${db.fetch(\r\n        `sayac_${member.guild.id}`\r\n      )}\\` üye olmamıza son \\`${db.fetch(`sayac_${member.guild.id}`) -\r\n        member.guild.memberCount}\\` üye kaldı! Sunucumuz şuanda \\`${\r\n        member.guild.memberCount\r\n      }\\` kişi!`\r\n    );\r\n});\r\n\r\n///////////////////////////////SAYAÇ SON////////////////////////////////",
+                "komutlar_code": "const Discord = require('discord.js')\r\nconst db = require('quick.db')\r\nconst ayarlar = require('../bot.js')\r\n \r\nexports.run = async (client, message, args) => {\r\n  if (!message.member.hasPermission(\"ADMINISTRATOR\")) return message.channel.send(\" Bu komutu kullanabilmek için **yönetici** yetkisine sahip olmalısın.\")\r\n  \r\n  const sayacsayi = await db.fetch(`sayac_${message.guild.id}`);\r\n  const sayackanal = message.mentions.channels.first()\r\n\r\n      \r\n  if(args[0] !== \"ayarla\" && args[0] !== \"sıfırla\") return message.channel.send(\" Yanlış Kullanım Lütfen **ayarla** veya **sıfırla** yaz.\")\r\n    if(args[0] === \"sıfırla\") {\r\n    if(!sayacsayi) {\r\n      message.channel.send(`📛 | **Ayarlanmayan şeyi sıfırlayamazsın kardeşim.**`)\r\nreturn\r\n    }\r\n    \r\n    db.delete(`sayac_${message.guild.id}`)\r\n    db.delete(`sayacK_${message.guild.id}`)\r\n    message.channel.send(`✅ | **Sayaç başarıyla sıfırlandı.**`)\r\n    return\r\n  }\r\n  \r\n  if(args[0] === \"ayarla\") {\r\n  if(isNaN(args[1])) {\r\n    message.channel.send(`📛 | **Bir sayı yazmalısın.**`)\r\n    return\r\n  }\r\n  \r\n  if(!sayackanal) {\r\n   await message.channel.send(`📛 | **Sayaç kanalını etiketlemelisin.**`)\r\n  return\r\n  }\r\n  \r\n  \r\n\r\n  \r\n\r\n \r\n        if(args[1] <= message.guild.memberCount) {\r\n                message.channel.send(`🔰 | **Sunucudaki kullanıcı sayısından** (${message.guild.memberCount}) **daha yüksek bir değer girmelisin.**`)\r\n                return\r\n        }\r\n  \r\n  db.set(`sayac_${message.guild.id}`, args[1])\r\n  db.set(`sayacK_${message.guild.id}`, sayackanal.id)\r\n  \r\n  message.channel.send(`✅ | **Sayaç** \\`${args[1]}\\`, **sayaç kanalı** ${sayackanal} **olarak ayarlandı.**`)\r\n}\r\n}\r\n \r\nexports.conf = {\r\n        enabled: true,\r\n        guildOnly: true,\r\n        aliases: ['sayac'],\r\n        permLevel: 0\r\n}\r\n \r\nexports.help = {\r\n        name: 'sayaç',\r\n        description: 'Sayacı ayarlar.',\r\n        usage: 'sayaç <sayı> <#kanal> / sıfırla'\r\n}",
+                "kod_rank": "altin",
+                "k_adi": "Muzaffer Karaman",
+                "date": "1/30/2022"
+            }
+        }
+    }
+]

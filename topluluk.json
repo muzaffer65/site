@@ -1,0 +1,118 @@
+[
+    {
+        "kodlar": {
+            "v12 Altyapı": {
+                "isim": "V12 CodeMakare v12 <3",
+                "id": "TEpbjCsjDQ",
+                "desc": "CodeMakare tarafından yapıldı ",
+                "modules": [
+                    "discord.js "
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/610402966507225088/c0a727329071d1aede444184c9f8b771.png",
+                "main_code": "indir:https://glitch.com/edit/#!/muzaffer-karaman",
+                "komutlar_code": "Çalmak yok ",
+                "kod_rank": "topluluk",
+                "k_adi": "v12 CodeMakare",
+                "date": "10/31/2021"
+            },
+            "Boş Altyapı": {
+                "isim": "Boş Altyapı",
+                "id": "mO7FbiUK0Q",
+                "desc": "v12 Boş Altyapı",
+                "modules": [
+                    "Discord.js"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/610402966507225088/c0a727329071d1aede444184c9f8b771.png",
+                "main_code": "Glitch Link\r\n\r\nhttps://ay.live/bosv12\r\n\r\n\r\nGİT HUB Linki\r\nhttps://ay.live/v12bos ",
+                "komutlar_code": "ÇALMAK YOK",
+                "kod_rank": "topluluk",
+                "k_adi": "Muzaffer Karaman",
+                "date": "1/13/2022"
+            },
+            "Bdfd Altyapı": {
+                "isim": "Bdfd Altyapı",
+                "id": "G2qfwvHGiv",
+                "desc": "Bdfd Altyapı 170 Komut",
+                "modules": [
+                    "."
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/610402966507225088/12e8dba5658515c051ac43e988bde8ea.png",
+                "main_code": "aDy40Eqj5Y8GvCrCerjelyAUH\r\n\r\nBdfd Kodu Kod Gir Kısmına Giriniz \r\nHayırlı Olsun",
+                "komutlar_code": ".",
+                "kod_rank": "topluluk",
+                "k_adi": "Muzaffer Karaman",
+                "date": "1/27/2022"
+            },
+            "Logo Bot Altyapısı": {
+                "isim": "Logo Bot Altyapısı",
+                "id": "c72c7TDLdn",
+                "desc": "Logo Bot Altyapısı",
+                "modules": [
+                    "."
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/610402966507225088/12e8dba5658515c051ac43e988bde8ea.png",
+                "main_code": "https://ay.live/astr01\r\n\r\n",
+                "komutlar_code": ".",
+                "kod_rank": "topluluk",
+                "k_adi": "Muzaffer Karaman",
+                "date": "1/28/2022"
+            },
+            "Sunucu Kurma Altyapısı": {
+                "isim": "Sunucu Kurma Altyapısı",
+                "id": "c13c1nZVr1",
+                "desc": "Sunucu Kurma Altyapısı",
+                "modules": [
+                    " "
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/610402966507225088/12e8dba5658515c051ac43e988bde8ea.png",
+                "main_code": "https://ay.live/skurma",
+                "komutlar_code": ".",
+                "kod_rank": "topluluk",
+                "k_adi": "Muzaffer Karaman",
+                "date": "1/28/2022"
+            },
+            "Kayıt Botu Altyapısı": {
+                "isim": "Kayıt Botu Altyapısı",
+                "id": "arCbaohqTN",
+                "desc": "Kayıt Botu Altyapısı",
+                "modules": [
+                    "."
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/610402966507225088/12e8dba5658515c051ac43e988bde8ea.png",
+                "main_code": "https://ay.link/cann1",
+                "komutlar_code": ".",
+                "kod_rank": "topluluk",
+                "k_adi": "Muzaffer Karaman",
+                "date": "1/28/2022"
+            },
+            "V13 Boş Altyapı": {
+                "isim": "V13 Boş Altyapı",
+                "id": "GoL1T5Gj0E",
+                "desc": "V13 Boş Altyapı",
+                "modules": [
+                    "."
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/610402966507225088/12e8dba5658515c051ac43e988bde8ea.png",
+                "main_code": "https://glitch.com/~code-makare-v-13-bos-altyapi",
+                "komutlar_code": ".",
+                "kod_rank": "topluluk",
+                "k_adi": "Muzaffer Karaman",
+                "date": "1/28/2022"
+            },
+            "onaylı bot": {
+                "isim": "onaylı bot",
+                "id": "qJoMF85Qs1",
+                "desc": "arkadaşlar onaylı bot altyapısı bu bot başkasından alınıp daha geliştirilmiş seviyede paylaşılıyor",
+                "modules": [
+                    "js yazılımlı "
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/925006061063258153/a_fa958b03e03efccb8bf3dd75e6ac7406.png",
+                "main_code": "https://ay.live/ughbbr",
+                "komutlar_code": "https://ay.live/ughbbr",
+                "kod_rank": "topluluk",
+                "k_adi": "(AT) CAN",
+                "date": "1/28/2022"
+            }
+        }
+    }
+]

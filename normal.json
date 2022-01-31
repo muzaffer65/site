@@ -1,0 +1,18 @@
+[
+    {
+        "kodlar": {
+            "isim": ".sil",
+            "id": "QaaSDNpYmO",
+            "desc": "Bdfd sil",
+            "modules": [
+                "Yok"
+            ],
+            "icon": "https://cdn.discordapp.com/avatars/723818718509137930/8ba9dbe3eb1e7b4e147ec0cb6223e62d.png",
+            "main_code": ". ",
+            "komutlar_code": "$nomention\r\n$onlyPerms[managemessages;Bu komutu kullanabilmek için **Mesajları Yönet** yetkisine sahip olmalısın]\r\n$onlyIf[$noMentionMessage<=100;En fazla **\"100\"** mesaj silebilirsiniz]\r\n$clear[$message;;yes]\r\n$color[00FF00]\r\n$title[Başarıyla Temizlendi]\r\n$description[$username **$message** mesaj sildi]\r\n$deletecommand\r\n$argsCheck[1;Silmek için en fazla **100** miktar giriniz.]\r\n$footer[Temizleyen $username]\r\n$deleteIn[2s]\r\n$suppressErrors[14 Günden Eski Mesajları Silememem Belirli bir rakam giriniz]",
+            "kod_rank": "normal",
+            "k_adi": "ᛘ Rose 🌙.",
+            "date": "1/29/2022"
+        }
+    }
+]
